@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 import './globals.css';
 import '/public/styles/font.css';
-import NavBar from '@/components/nav-bar/NavBar';
+import NavBar from '@/components/ui/NavBar';
 
 export const metadata: Metadata = {
   title: 'ENGAGE ENERGY - KUSITMS',
