@@ -1,14 +1,20 @@
 'use client';
 
 import clsx from 'clsx';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
 const NavBar = () => {
+  const pathname = usePathname();
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleMenuButtonClick = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  const pageName = pathname === '/' ? 'HOME' : pathname === '/about' && 'ABOUT';
 
   return (
     <div>
@@ -17,7 +23,9 @@ const NavBar = () => {
           <div>
             <img src="/logo/logo.svg" alt="로고" />
           </div>
-          <div className="font-clash-display text-2xl font-medium">HOME</div>
+          <div className="font-clash-display text-2xl font-medium">
+            {pageName}
+          </div>
           <button
             onClick={handleMenuButtonClick}
             className="flex w-[40px] justify-end"
@@ -27,14 +35,22 @@ const NavBar = () => {
         </div>
         <div
           className={clsx('relative transition-opacity', {
-            'pointer-events-none opacity-100': isMenuOpen,
-            'opacity-0': !isMenuOpen,
+            'opacity-100': isMenuOpen,
+            'pointer-events-none opacity-0': !isMenuOpen,
           })}
         >
           <div className="absolute z-50 flex h-[calc(100vh-4rem)] w-full items-center justify-center bg-black">
             <ul className="-mt-[10rem] flex h-[15rem] flex-col items-center justify-between font-clash-display text-lg font-medium">
-              <li>HOME</li>
-              <li>ABOUT</li>
+              <li>
+                <Link href="/" onClick={() => setIsMenuOpen(false)}>
+                  HOME
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" onClick={() => setIsMenuOpen(false)}>
+                  ABOUT
+                </Link>
+              </li>
               <li>WORK</li>
               {/* <li>ARCHIVE</li> */}
             </ul>
