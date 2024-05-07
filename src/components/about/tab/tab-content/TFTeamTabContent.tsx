@@ -1,4 +1,4 @@
-import Paragraph from '@/components/about/Paragraph';
+import Paragraph from '@/components/ui/Paragraph';
 import TabContentLayout from './TabContentLayout';
 import Heading from '@/components/about/Heading';
 

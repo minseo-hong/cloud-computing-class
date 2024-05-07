@@ -14,7 +14,33 @@ const NavBar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const pageName = pathname === '/' ? 'HOME' : pathname === '/about' && 'ABOUT';
+  const pageName =
+    pathname === '/'
+      ? 'HOME'
+      : pathname === '/about'
+        ? 'ABOUT'
+        : pathname.startsWith('/works')
+          ? 'WORK'
+          : pathname === '/archive' && 'ARCHIVE';
+
+  const menuList = [
+    {
+      name: 'HOME',
+      href: '/',
+    },
+    {
+      name: 'ABOUT',
+      href: '/about',
+    },
+    {
+      name: 'WORK',
+      href: '/works',
+    },
+    // {
+    //   name: 'ARCHIVE',
+    //   href: '/archive',
+    // },
+  ];
 
   return (
     <div>
@@ -41,18 +67,13 @@ const NavBar = () => {
         >
           <div className="absolute z-50 flex h-[calc(100vh-4rem)] w-full items-center justify-center bg-black">
             <ul className="-mt-[10rem] flex h-[15rem] flex-col items-center justify-between font-clash-display text-lg font-medium">
-              <li>
-                <Link href="/" onClick={() => setIsMenuOpen(false)}>
-                  HOME
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" onClick={() => setIsMenuOpen(false)}>
-                  ABOUT
-                </Link>
-              </li>
-              <li>WORK</li>
-              {/* <li>ARCHIVE</li> */}
+              {menuList.map((menu, index) => (
+                <li key={index}>
+                  <Link href={menu.href} onClick={() => setIsMenuOpen(false)}>
+                    {menu.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
