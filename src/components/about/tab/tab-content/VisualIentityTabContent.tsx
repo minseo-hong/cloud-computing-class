@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import Paragraph from '../../Paragraph';
+import Paragraph from '../../../ui/Paragraph';
 import TabContentLayout from './TabContentLayout';
 
 const VisualIentityTabContent = () => {

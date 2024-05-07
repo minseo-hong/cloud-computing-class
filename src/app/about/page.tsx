@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import Paragraph from '@/components/about/Paragraph';
+import Paragraph from '@/components/ui/Paragraph';
 import TabSection from '@/components/about/tab/TabSection';
 import MainHeading from '@/components/ui/MainHeading';
 
