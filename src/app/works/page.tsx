@@ -56,8 +56,8 @@ const Works = () => {
             </ul>
           </nav>
         )}
-        <MainHeading className="desktop:block hidden" />
-        <div className="desktop:grid-cols-3 desktop:mt-8 desktop:gap-x-3 desktop:gap-y-6 grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5">
+        <MainHeading className="hidden desktop:block" />
+        <div className="grid grid-cols-1 desktop:mt-6 desktop:grid-cols-3 desktop:gap-x-3 desktop:gap-y-6 md:grid-cols-4 lg:grid-cols-5">
           {newWorkList.map((work) => (
             <article key={work.slug}>
               <Link
@@ -72,9 +72,9 @@ const Works = () => {
                   objectFit="cover"
                 />
               </Link>
-              <div className="desktop:px-0 desktop:pb-0 px-12 pb-8 pt-4">
-                <h1 className="desktop:text-base text-lg">{work.name}</h1>
-                <p className="text-light-gray desktop:text-sm mt-0.5 text-sm font-extralight">
+              <div className="px-12 pb-8 pt-4 desktop:px-0 desktop:pb-0">
+                <h1 className="text-lg desktop:text-base">{work.name}</h1>
+                <p className="mt-0.5 text-sm font-extralight text-light-gray desktop:text-sm">
                   Team {work.teamName}
                 </p>
               </div>

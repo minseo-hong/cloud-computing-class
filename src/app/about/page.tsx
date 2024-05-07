@@ -38,8 +38,8 @@ const About = () => {
     <div className="px-6 pb-16">
       <main className="mx-auto max-w-5xl">
         <MainHeading />
-        <div className="mx-auto max-w-3xl">
-          <section className="desktop:flex-row desktop:items-end mt-8 flex flex-col gap-6">
+        <div className="mx-auto mt-8 max-w-3xl desktop:mt-4">
+          <section className="flex flex-col gap-6 desktop:flex-row desktop:items-end">
             <Paragraph>
               큐시즘에서는 기획, 개발, 디자인 세 파트가 각자의 역량을 발휘하며
               새로운 서비스를 제작합니다. 이는 서로 맞물리며 에너지를 형성하는
@@ -63,7 +63,7 @@ const About = () => {
             <Paragraph className="mt-4">
               큐시즘 1회 전시는 서울특별시 용산구 디멘션갤러리에서 개최됩니다.
             </Paragraph>
-            <div className="desktop:flex-row desktop:justify-between desktop:gap-12 desktop:mt-10 mx-auto mt-6 flex max-w-2xl flex-col gap-8">
+            <div className="mx-auto mt-6 flex max-w-2xl flex-col gap-8 desktop:mt-10 desktop:flex-row desktop:justify-between desktop:gap-12">
               {placeMapList.map((placeMap, index) => (
                 <div key={index}>
                   <h3 className="font-medium">{placeMap.floor}</h3>

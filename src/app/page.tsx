@@ -39,23 +39,23 @@ export default function Home() {
 
   return (
     <div className="px-6">
-      <main className="desktop:items-start desktop:min-h-[750px] relative mx-auto flex max-w-5xl flex-col items-center justify-between pb-8 lg:min-h-[calc(100vh-4rem)]">
+      <main className="relative mx-auto flex max-w-5xl flex-col items-center justify-between pb-8 desktop:min-h-[750px] desktop:items-start lg:min-h-[calc(100vh-4rem)]">
         <div>
           <MainHeading />
-          <div className="desktop:flex-row desktop:w-[533px] desktop:gap-12 desktop:justify-between desktop:mt-4 mt-10 flex flex-col items-center gap-6">
-            <p className="desktop:text-left text-center text-sm">
+          <div className="mt-10 flex flex-col items-center gap-6 desktop:mt-0 desktop:w-[533px] desktop:flex-row desktop:justify-between desktop:gap-12">
+            <p className="text-center text-sm desktop:text-left">
               2024.06.08.SAT
-              <br className="desktop:block hidden" />
+              <br className="hidden desktop:block" />
               10:00AM-19:00PM
             </p>
-            <p className="desktop:text-left text-center text-sm">
+            <p className="text-center text-sm desktop:text-left">
               DIMENSION GALLERY
               <br />
               58, HANGANG-DAERO,YONGSAN-GU, SEOUL
             </p>
           </div>
         </div>
-        <div className="desktop:mt-0 desktop:top-36 desktop:w-auto desktop:right-0 desktop:absolute -ml-4 mt-8 flex w-[calc(100vw-(100vw-100%)+24px)] lg:top-8">
+        <div className="-ml-4 mt-8 flex w-[calc(100vw-(100vw-100%)+24px)] desktop:absolute desktop:right-0 desktop:top-36 desktop:mt-0 desktop:w-auto min-[850px]:top-16">
           <div className="relative right-0 z-[-1] w-[900px]">
             <div className="h-[441px]" />
             <Image
@@ -63,12 +63,12 @@ export default function Home() {
               alt="원형 디자인"
               width={900}
               height={441}
-              className="object-fit desktop:w-[1100px] desktop:max-w-[1100px] absolute right-0 top-0 w-[900px] max-w-[900px] object-right"
+              className="object-fit absolute right-0 top-0 w-[900px] max-w-[900px] object-right desktop:w-[1100px] desktop:max-w-[1100px]"
             />
           </div>
         </div>
         <div className="mt-12 flex flex-col items-center">
-          <div className="desktop:flex-row desktop:gap-6 flex flex-col items-center gap-4">
+          <div className="flex flex-col items-center gap-4 desktop:flex-row desktop:gap-6">
             <div className="flex items-end gap-6">
               {partnerList.slice(0, 3).map((partner, index) =>
                 partner.link ? (

@@ -12,10 +12,10 @@ const VisualIentityTabContent = () => {
           <Paragraph>
             구조화 되며 맞물리는 세 파트의 모습을 톱니라는 모티브를 통해
             시각화했습니다.
-            <br className="desktop:block hidden" />
+            <br className="hidden desktop:block" />
             포스터의 메인 그래픽은 맞물려 움직이는 서비스 제작자들의 모습을
             상징합니다.
-            <br className="desktop:block hidden" />
+            <br className="hidden desktop:block" />
             강렬한 색감의 대비를 통해 전시의 에너지가 전달될 수 있기를
             기대합니다.
           </Paragraph>

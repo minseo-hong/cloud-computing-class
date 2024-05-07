@@ -10,19 +10,19 @@ const PosterCarousel = () => {
 
   const posterList = [
     {
-      src: '/images/posters/all-poster.svg',
+      src: '/images/posters/all-poster.png',
       alt: '전체 포스터 이미지',
     },
     {
-      src: '/images/posters/plan-poster.svg',
+      src: '/images/posters/plan-poster.png',
       alt: '기획 포스터 이미지',
     },
     {
-      src: '/images/posters/design-poster.svg',
+      src: '/images/posters/design-poster.png',
       alt: '디자인 포스터 이미지',
     },
     {
-      src: '/images/posters/develop-poster.svg',
+      src: '/images/posters/develop-poster.png',
       alt: '개발 포스터 이미지',
     },
   ];
@@ -38,7 +38,7 @@ const PosterCarousel = () => {
   };
 
   return (
-    <div className="desktop:bg-dark-gray relative w-full">
+    <div className="relative w-full desktop:bg-dark-gray">
       <CarouselButton direction="prev" onClick={handlePrevClick} />
       <div className="mx-auto mt-12 max-w-[20rem]">
         <Image

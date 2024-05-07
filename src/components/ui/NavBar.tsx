@@ -46,16 +46,26 @@ const NavBar = () => {
   return (
     <div>
       <nav className="fixed top-0 z-50 flex w-full flex-col bg-black px-6">
-        <div className="mx-auto flex h-[4rem] w-full max-w-5xl items-center justify-between">
-          <Link href="/">
+        <div className="mx-auto flex h-[4rem] w-full max-w-5xl items-center justify-between desktop:h-[3rem] desktop:items-end">
+          <Link href="/" className="flex items-center gap-2">
+            <span className="hidden desktop:block">KUSITMS 1st EXHIBITION</span>
             <Image src="/logo/logo.svg" alt="로고" width={40} height={22} />
           </Link>
-          <div className="font-clash-display text-2xl font-medium">
+          <div className="font-clash-display text-2xl font-medium desktop:hidden">
             {pageName}
           </div>
+          <ul className="hidden items-center justify-between gap-8 font-clash-display text-lg font-medium sm:flex">
+            {menuList.map((menu, index) => (
+              <li key={index}>
+                <Link href={menu.href} onClick={() => setIsMenuOpen(false)}>
+                  {menu.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
           <button
             onClick={handleMenuButtonClick}
-            className="flex w-[40px] justify-end"
+            className="flex w-[40px] justify-end sm:hidden"
           >
             <Image
               src="/icons/hamburger-menu.svg"
@@ -84,7 +94,7 @@ const NavBar = () => {
           </div>
         </div>
       </nav>
-      <div className="h-[4rem]" />
+      <div className="h-[4rem] desktop:h-[3rem]" />
     </div>
   );
 };
