@@ -10,7 +10,7 @@ import MainHeading from '@/components/ui/MainHeading';
 
 const Works = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [screenWidth, setScreenWidth] = useState(1024);
 
   const pageLength = workList.length / 5 + 1;
 
@@ -20,6 +20,8 @@ const Works = () => {
       : workList;
 
   useEffect(() => {
+    setScreenWidth(window.innerWidth);
+
     const handleResize = () => {
       setScreenWidth(window.innerWidth);
     };
@@ -40,7 +42,7 @@ const Works = () => {
                   <li key={page}>
                     <div
                       className={clsx(
-                        'flex h-[1.5rem] w-[1.5rem] items-center justify-center rounded-full text-sm',
+                        'flex h-[1.5rem] w-[1.5rem] cursor-pointer items-center justify-center rounded-full text-sm',
                         {
                           'bg-white text-black': page === currentPage,
                           'bg-gray text-black': page !== currentPage,
@@ -85,5 +87,4 @@ const Works = () => {
     </div>
   );
 };
-
 export default Works;

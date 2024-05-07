@@ -8,7 +8,7 @@ const PrevIcon = () => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path d="M0 6L10 0V12L0 6Z" fill="#040000" />
-      <line x1="10" y1="6" x2="19" y2="6" stroke="#040000" stroke-width="2" />
+      <line x1="10" y1="6" x2="19" y2="6" stroke="#040000" strokeWidth="2" />
     </svg>
   );
 };

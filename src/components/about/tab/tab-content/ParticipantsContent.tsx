@@ -34,7 +34,7 @@ const ParticipantsContent = () => {
     <TabContentLayout>
       <div>
         <Heading as="h2">큐시즘 29기 학회원</Heading>
-        <div className="mt-12 flex flex-col gap-12">
+        <div className="mt-12 flex flex-col gap-12 desktop:gap-8">
           {teamList.map((team, index) => (
             <div
               key={index}

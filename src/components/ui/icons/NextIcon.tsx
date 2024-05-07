@@ -14,7 +14,7 @@ const NextIcon = () => {
         y2="-1"
         transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 9 7)"
         stroke="#040000"
-        stroke-width="2"
+        strokeWidth="2"
       />
     </svg>
   );
