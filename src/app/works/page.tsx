@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { workList } from '@/data/works';
+import MainHeading from '@/components/ui/MainHeading';
 
 const Works = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -55,7 +56,8 @@ const Works = () => {
             </ul>
           </nav>
         )}
-        <div className="desktop:grid-cols-3 desktop:gap-x-4 desktop:gap-y-6 grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5">
+        <MainHeading className="desktop:block hidden" />
+        <div className="desktop:grid-cols-3 desktop:mt-8 desktop:gap-x-3 desktop:gap-y-6 grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5">
           {newWorkList.map((work) => (
             <article key={work.slug}>
               <Link
@@ -71,8 +73,8 @@ const Works = () => {
                 />
               </Link>
               <div className="desktop:px-0 desktop:pb-0 px-12 pb-8 pt-4">
-                <h1 className="text-lg">{work.name}</h1>
-                <p className="text-light-gray mt-0.5 text-sm font-extralight">
+                <h1 className="desktop:text-base text-lg">{work.name}</h1>
+                <p className="text-light-gray desktop:text-sm mt-0.5 text-sm font-extralight">
                   Team {work.teamName}
                 </p>
               </div>

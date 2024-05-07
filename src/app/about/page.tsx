@@ -63,7 +63,7 @@ const About = () => {
             <Paragraph className="mt-4">
               큐시즘 1회 전시는 서울특별시 용산구 디멘션갤러리에서 개최됩니다.
             </Paragraph>
-            <div className="desktop:flex-row desktop:justify-between desktop:gap-12 desktop:mt-10 mx-auto mt-6 flex max-w-2xl flex-col">
+            <div className="desktop:flex-row desktop:justify-between desktop:gap-12 desktop:mt-10 mx-auto mt-6 flex max-w-2xl flex-col gap-8">
               {placeMapList.map((placeMap, index) => (
                 <div key={index}>
                   <h3 className="font-medium">{placeMap.floor}</h3>

@@ -72,7 +72,7 @@ const NavBar = () => {
           })}
         >
           <div className="absolute left-0 flex h-[calc(100vh-4rem)] w-screen items-center justify-center bg-black">
-            <ul className="-mt-[10rem] flex h-[15rem] flex-col items-center justify-between font-clash-display text-lg font-medium">
+            <ul className="flex h-[15rem] -translate-y-[30%] flex-col items-center justify-between font-clash-display text-lg font-medium">
               {menuList.map((menu, index) => (
                 <li key={index}>
                   <Link href={menu.href} onClick={() => setIsMenuOpen(false)}>
