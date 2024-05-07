@@ -2,76 +2,108 @@ import MainHeading from '@/components/ui/MainHeading';
 import Image from 'next/image';
 
 export default function Home() {
+  const partnerList = [
+    {
+      name: 'KUSITMS',
+      src: '/images/partners/kusitms.svg',
+      alt: '큐시즘 로고',
+      width: 90,
+    },
+    {
+      name: 'SANGSANGUNIV',
+      src: '/images/partners/sangsanguniv.svg',
+      alt: '상상유니브 로고',
+      width: 80,
+    },
+    {
+      name: 'ASAN-NANUM',
+      src: '/images/partners/asan-nanum.svg',
+      alt: '아산나눔재단 로고',
+      width: 80,
+    },
+    {
+      name: 'D-CAMP',
+      src: '/images/partners/d-camp.svg',
+      alt: '디캠프 로고',
+      width: 70,
+    },
+    {
+      name: 'CODEIT',
+      src: '/images/partners/codeit.svg',
+      alt: '코드잇 로고',
+      width: 65,
+    },
+  ];
+
   return (
-    <main className="mb-8 px-6">
-      <MainHeading />
-      <p className="mt-10 text-center text-sm">
-        2024.06.08.SAT 10:00AM-19:00PM
-      </p>
-      <p className="mt-6 text-center text-sm">
-        DIMENSION GALLERY
-        <br />
-        58, HANGANG-DAERO,YONGSAN-GU, SEOUL
-      </p>
-      <div className="-ml-4 mt-8 flex w-[calc(100vw-(100vw-100%)+24px)]">
-        <div className="relative right-0 z-[-1] w-[900px]">
-          <div className="h-[441px]" />
-          <Image
-            src="/images/circle-designs/circle-design.svg"
-            alt="원형 디자인"
-            width={900}
-            height={441}
-            className="object-fit absolute right-0 top-0 w-[900px] max-w-[900px] object-right"
-          />
+    <div className="px-6">
+      <main className="desktop:items-start desktop:min-h-[750px] desktop:pb-6 relative z-[-1] mx-auto flex max-w-5xl flex-col items-center justify-between pb-12 min-[992px]:min-h-[calc(100vh-4rem)]">
+        <div className="z-[-1]">
+          <MainHeading />
+          <div className="desktop:flex-row desktop:w-[533px] desktop:gap-12 desktop:justify-between desktop:mt-4 mt-10 flex flex-col items-center gap-6">
+            <p className="desktop:text-left text-center text-sm">
+              2024.06.08.SAT
+              <br className="desktop:block hidden" />
+              10:00AM-19:00PM
+            </p>
+            <p className="desktop:text-left text-center text-sm">
+              DIMENSION GALLERY
+              <br />
+              58, HANGANG-DAERO,YONGSAN-GU, SEOUL
+            </p>
+          </div>
         </div>
-      </div>
-      <div className="mt-12 flex flex-col items-center">
-        <div className="flex items-center gap-6">
-          <div className="w-[80px]">
+        <div className="desktop:mt-0 desktop:top-36 desktop:w-auto desktop:right-0 desktop:absolute z-[-1] -ml-4 mt-8 flex w-[calc(100vw-(100vw-100%)+24px)] min-[992px]:top-8">
+          <div className="relative right-0 z-[-1] w-[900px]">
+            <div className="h-[441px]" />
             <Image
-              src="/images/partners/kusitms.svg"
-              alt="큐시즘 로고"
-              width={80}
-              height={18}
-            />
-          </div>
-          <div>
-            <Image
-              src="/images/partners/sangsanguniv.svg"
-              alt="상상유니브 로고"
-              width={80}
-              height={20}
-              className="-mt-2"
-            />
-          </div>
-          <div className="w-[80px]">
-            <Image
-              src="/images/partners/asan-nanum.svg"
-              alt="아산나눔재단 로고"
-              width={80}
-              height={16}
+              src="/images/circle-designs/circle-design.svg"
+              alt="원형 디자인"
+              width={900}
+              height={441}
+              className="object-fit desktop:w-[1100px] desktop:max-w-[1100px] absolute right-0  top-0 w-[900px] max-w-[900px] object-right"
             />
           </div>
         </div>
-        <div className="mt-6 flex items-center gap-6">
-          <div className="w-[60px]">
-            <Image
-              src="/images/partners/d-camp.svg"
-              alt="디캠프 로고"
-              width={80}
-              height={13}
-            />
-          </div>
-          <div className="-mt-1 w-[50px]">
-            <Image
-              src="/images/partners/codeit.svg"
-              alt="코드잇 로고"
-              width={80}
-              height={13}
-            />
+        <div className="mt-12 flex flex-col items-center">
+          <div className="desktop:flex-row desktop:gap-6 flex flex-col items-center gap-4">
+            <div className="flex items-end gap-6">
+              {partnerList.slice(0, 3).map((partner, index) => (
+                <div
+                  key={index}
+                  style={{
+                    width: partner.width,
+                  }}
+                >
+                  <Image
+                    src={partner.src}
+                    alt={partner.alt}
+                    width={120}
+                    height={18}
+                  />
+                </div>
+              ))}
+            </div>
+            <div className="flex items-end gap-6">
+              {partnerList.slice(3, 5).map((partner, index) => (
+                <div
+                  key={index}
+                  style={{
+                    width: partner.width,
+                  }}
+                >
+                  <Image
+                    src={partner.src}
+                    alt={partner.alt}
+                    width={120}
+                    height={18}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
-    </main>
+      </main>
+    </div>
   );
 }

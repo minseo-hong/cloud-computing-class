@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        desktop: '600px',
+      },
       fontFamily: {
         'clash-display': ['Clash Display', 'sans-serif'],
         pretendard: ['Pretendard', 'sans-serif'],

@@ -44,11 +44,11 @@ const NavBar = () => {
 
   return (
     <div>
-      <nav className="fixed top-0 flex w-full flex-col bg-black">
-        <div className="flex h-[4rem] w-full items-center justify-between px-6">
-          <div>
+      <nav className="fixed top-0 flex w-full flex-col bg-black px-6">
+        <div className="mx-auto flex h-[4rem] w-full max-w-5xl items-center justify-between">
+          <Link href="/">
             <img src="/logo/logo.svg" alt="로고" />
-          </div>
+          </Link>
           <div className="font-clash-display text-2xl font-medium">
             {pageName}
           </div>
