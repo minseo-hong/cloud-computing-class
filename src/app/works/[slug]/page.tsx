@@ -39,7 +39,7 @@ const WorkDetail = ({ params }: { params: { slug: string } }) => {
           <h2 className="font-clash-display font-medium">Contact</h2>
           <div className="mt-1 flex flex-col gap-1">
             <div className="flex items-center text-sm font-extralight">
-              <strong className="w-[4.5rem] font-clash-display text-xs">
+              <strong className="w-[4.5rem] text-xs font-medium">
                 Web Link
               </strong>
               <Link
@@ -52,7 +52,7 @@ const WorkDetail = ({ params }: { params: { slug: string } }) => {
               </Link>
             </div>
             <div className="flex items-center text-sm font-extralight">
-              <strong className="w-[4.5rem] font-clash-display text-xs">
+              <strong className="w-[4.5rem] text-xs font-medium">
                 Instagram
               </strong>
               <span>@farmus</span>

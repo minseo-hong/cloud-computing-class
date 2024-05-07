@@ -1,6 +1,7 @@
 'use client';
 
 import clsx from 'clsx';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
@@ -44,10 +45,10 @@ const NavBar = () => {
 
   return (
     <div>
-      <nav className="fixed top-0 flex w-full flex-col bg-black px-6">
+      <nav className="fixed top-0 z-50 flex w-full flex-col bg-black px-6">
         <div className="mx-auto flex h-[4rem] w-full max-w-5xl items-center justify-between">
           <Link href="/">
-            <img src="/logo/logo.svg" alt="로고" />
+            <Image src="/logo/logo.svg" alt="로고" width={40} height={22} />
           </Link>
           <div className="font-clash-display text-2xl font-medium">
             {pageName}
@@ -56,16 +57,21 @@ const NavBar = () => {
             onClick={handleMenuButtonClick}
             className="flex w-[40px] justify-end"
           >
-            <img src="/icons/hamburger-menu.svg" alt="메뉴 버튼" />
+            <Image
+              src="/icons/hamburger-menu.svg"
+              alt="메뉴 버튼"
+              width={26}
+              height={22}
+            />
           </button>
         </div>
         <div
-          className={clsx('relative transition-opacity', {
+          className={clsx('transition-opacity duration-300', {
             'opacity-100': isMenuOpen,
             'pointer-events-none opacity-0': !isMenuOpen,
           })}
         >
-          <div className="absolute z-50 flex h-[calc(100vh-4rem)] w-full items-center justify-center bg-black">
+          <div className="absolute left-0 flex h-[calc(100vh-4rem)] w-screen items-center justify-center bg-black">
             <ul className="-mt-[10rem] flex h-[15rem] flex-col items-center justify-between font-clash-display text-lg font-medium">
               {menuList.map((menu, index) => (
                 <li key={index}>

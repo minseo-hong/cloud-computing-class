@@ -8,7 +8,7 @@ interface TabItemProps {
 
 const TabItem = ({ as: Wrapper = 'div', active, onClick }: TabItemProps) => {
   return (
-    <Wrapper onClick={onClick}>
+    <Wrapper className="cursor-pointer" onClick={onClick}>
       <div
         className={clsx('h-[1.125rem] w-[1.125rem] rounded-full', {
           'bg-red': active,
