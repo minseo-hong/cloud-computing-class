@@ -14,8 +14,8 @@ const CarouselButton = ({ direction, onClick }: CarouselButtonProps) => {
       className={clsx(
         'absolute top-1/2 flex h-[1.5rem] w-[1.5rem] -translate-y-1/2 items-center justify-center rounded-full bg-white text-black',
         {
-          'left-0 desktop:left-8': direction === 'prev',
-          'right-0 desktop:right-8': direction === 'next',
+          'left-0': direction === 'prev',
+          'right-0': direction === 'next',
         },
       )}
       onClick={onClick}

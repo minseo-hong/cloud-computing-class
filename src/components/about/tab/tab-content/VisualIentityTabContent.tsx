@@ -6,7 +6,7 @@ const VisualIentityTabContent = () => {
   return (
     <TabContentLayout>
       <PosterCarousel />
-      <div className="mt-12 flex justify-center">
+      <div className="mt-12">
         <div className="flex flex-col items-start gap-4">
           <h2 className="text-lg font-medium">전시 비주얼 아이덴티티</h2>
           <Paragraph>

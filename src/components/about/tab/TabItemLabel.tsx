@@ -15,15 +15,11 @@ const TabItemLabel = ({
 }: TabItemLabelProps) => {
   return (
     <span
-      className={clsx(
-        'font-clash-display text-xl font-semibold text-red',
-        className,
-        {
-          'text-red': active,
-          'text-gray': !active,
-          'whitespace-pre-wrap text-center': lineEnter,
-        },
-      )}
+      className={clsx('font-clash-display text-xl font-semibold', className, {
+        'text-red': active,
+        'text-gray': !active,
+        'whitespace-pre-wrap text-center': lineEnter,
+      })}
     >
       {label}
     </span>

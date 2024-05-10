@@ -38,7 +38,7 @@ const PosterCarousel = () => {
   };
 
   return (
-    <div className="relative w-full desktop:bg-dark-gray">
+    <div className="relative w-full">
       <CarouselButton direction="prev" onClick={handlePrevClick} />
       <div className="mx-auto mt-12 max-w-[20rem]">
         <Image

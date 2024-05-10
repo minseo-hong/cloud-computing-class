@@ -39,9 +39,9 @@ export default function Home() {
 
   return (
     <div className="px-6">
-      <main className="relative mx-auto flex max-w-5xl flex-col items-center justify-between pb-8 desktop:min-h-[750px] desktop:items-start lg:min-h-[calc(100vh-4rem)]">
+      <MainHeading />
+      <main className="relative flex flex-col items-center justify-between pb-8 desktop:min-h-[750px] desktop:items-start lg:min-h-[calc(100vh-7rem)]">
         <div>
-          <MainHeading />
           <div className="mt-10 flex flex-col items-center gap-6 desktop:mt-0 desktop:w-[533px] desktop:flex-row desktop:justify-between desktop:gap-12">
             <p className="text-center text-sm desktop:text-left">
               2024.06.08.SAT
@@ -55,7 +55,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="-ml-4 mt-8 flex w-[calc(100vw-(100vw-100%)+24px)] desktop:absolute desktop:right-0 desktop:top-36 desktop:mt-0 desktop:w-auto min-[850px]:top-16">
+        <div className="-ml-4 mt-8 flex w-[calc(100vw-(100vw-100%)+24px)] desktop:absolute desktop:right-0 desktop:top-14 desktop:mt-0 desktop:w-auto">
           <div className="relative right-0 z-[-1] w-[900px]">
             <div className="h-[441px]" />
             <Image
