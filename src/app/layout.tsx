@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import '/public/styles/font.css';
 import NavBar from '@/components/ui/NavBar';
-import MicrosoftClarity from '@/components/ui/analysis/MicrosoftClarity';
+import Metrics from '@/components/ui/metrics/Metrics';
 
 export const metadata: Metadata = {
   title: 'ENGAGE ENERGY - KUSITMS',
@@ -17,12 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <head>
-        <MicrosoftClarity />
-      </head>
       <body className="bg-black font-pretendard text-white">
         <NavBar />
         {children}
+        <Metrics />
       </body>
     </html>
   );
