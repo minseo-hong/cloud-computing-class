@@ -33,7 +33,8 @@ const Works = () => {
 
   return (
     <div className="desktop:px-6">
-      <main className="mx-auto max-w-5xl">
+      <MainHeading className="hidden desktop:block" />
+      <main className="px-10">
         {screenWidth < 600 && (
           <nav className="mb-6 mt-4">
             <ul className="flex items-center justify-center gap-6">
@@ -58,8 +59,7 @@ const Works = () => {
             </ul>
           </nav>
         )}
-        <MainHeading className="hidden desktop:block" />
-        <div className="grid grid-cols-1 desktop:mt-6 desktop:grid-cols-3 desktop:gap-x-3 desktop:gap-y-6 md:grid-cols-4 lg:grid-cols-5">
+        <div className="grid grid-cols-1 desktop:mt-6 desktop:grid-cols-3 desktop:gap-x-2 desktop:gap-y-6 lg:grid-cols-4">
           {newWorkList.map((work) => (
             <article key={work.slug}>
               <Link

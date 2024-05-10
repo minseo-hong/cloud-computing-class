@@ -1,5 +1,7 @@
 import clsx from 'clsx';
 
+import TextLogo from './TextLogo';
+
 interface MainHeadingProps {
   className?: string;
 }
@@ -17,9 +19,10 @@ const MainHeading = ({ className }: MainHeadingProps) => {
           <span className="text-base xs:text-lg desktop:hidden">
             KUSITMS 1st EXHIBITION
           </span>
-          <strong className="font-clash-display text-3xl xs:text-4xl desktop:text-5xl">
+          <TextLogo />
+          {/* <strong className="font-clash-display text-3xl xs:text-4xl desktop:text-5xl">
             ENGAGE ENERGY
-          </strong>
+          </strong> */}
         </h1>
       </header>
       <div className="desktop:h-[4rem]" />

@@ -36,8 +36,8 @@ const About = () => {
 
   return (
     <div className="px-6 pb-16">
+      <MainHeading />
       <main className="mx-auto max-w-5xl">
-        <MainHeading />
         <div className="mx-auto mt-8 max-w-3xl desktop:mt-4">
           <section className="flex flex-col gap-6 desktop:flex-row desktop:items-end">
             <Paragraph>

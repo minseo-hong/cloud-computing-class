@@ -46,7 +46,7 @@ const NavBar = () => {
   return (
     <div>
       <nav className="fixed top-0 z-50 flex w-full flex-col bg-black px-6">
-        <div className="mx-auto flex h-[4rem] w-full max-w-5xl items-center justify-between desktop:h-[3rem] desktop:items-end">
+        <div className="flex h-[4rem] w-full items-center justify-between desktop:h-[2.75rem] desktop:items-end">
           <Link href="/" className="flex items-center gap-2">
             <span className="hidden desktop:block">KUSITMS 1st EXHIBITION</span>
             <Image src="/logo/logo.svg" alt="로고" width={40} height={22} />
@@ -94,7 +94,7 @@ const NavBar = () => {
           </div>
         </div>
       </nav>
-      <div className="h-[4rem] desktop:h-[3rem]" />
+      <div className="h-[4rem] desktop:h-[2.75rem]" />
     </div>
   );
 };
