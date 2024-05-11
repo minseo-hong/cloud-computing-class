@@ -34,7 +34,7 @@ const Works = () => {
   return (
     <div className="desktop:px-6">
       <MainHeading className="hidden desktop:block" />
-      <main className="px-10">
+      <main className="px-0 desktop:px-10">
         {screenWidth < 600 && (
           <nav className="mb-6 mt-4">
             <ul className="flex items-center justify-center gap-6">
