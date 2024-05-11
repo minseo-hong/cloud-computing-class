@@ -19,7 +19,9 @@ const MainHeading = ({ className }: MainHeadingProps) => {
           <span className="text-base xs:text-lg desktop:hidden">
             KUSITMS 1st EXHIBITION
           </span>
-          <TextLogo />
+          <div className="w-[300px] xs:w-[350px] desktop:w-[439px]">
+            <TextLogo />
+          </div>
           {/* <strong className="font-clash-display text-3xl xs:text-4xl desktop:text-5xl">
             ENGAGE ENERGY
           </strong> */}

@@ -1,12 +1,6 @@
 const TextLogo = () => {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="439"
-      height="34"
-      viewBox="0 0 879 69"
-      fill="none"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 879 69" fill="none">
       <path
         d="M59.5 68H0V0.999999H59.5V17.9H18.8V25.9H58V42.7H18.8V51.1H59.5V68Z"
         fill="white"
