@@ -5,12 +5,10 @@ const GoogleAnalytics = () => {
     <>
       <Script
         id="google-analytics-link"
-        strategy="beforeInteractive"
         src="https://www.googletagmanager.com/gtag/js?id=G-W0VS7MW71Q"
       />
       <Script
         id="google-analytics-code"
-        strategy="beforeInteractive"
         dangerouslySetInnerHTML={{
           __html: `window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
