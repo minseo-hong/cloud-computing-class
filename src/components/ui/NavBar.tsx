@@ -94,6 +94,13 @@ const NavBar = () => {
           </div>
         </div>
       </nav>
+      <div
+        className="fixed z-40 hidden h-[12rem] w-full bg-black desktop:block"
+        style={{
+          background:
+            'linear-gradient(180deg, #040000 0%, rgba(4, 0, 0, 0.00) 100%)',
+        }}
+      />
       <div className="h-[4rem] desktop:h-[2.75rem]" />
     </div>
   );

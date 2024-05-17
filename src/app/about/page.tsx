@@ -38,7 +38,7 @@ const About = () => {
     <div className="px-6 pb-16">
       <MainHeading />
       <main className="mx-auto max-w-5xl">
-        <div className="mx-auto mt-8 max-w-3xl desktop:mt-4">
+        <div className="mx-auto mt-8 max-w-3xl desktop:mt-14">
           <section className="flex flex-col gap-6 desktop:flex-row desktop:items-end">
             <Paragraph>
               큐시즘에서는 기획, 개발, 디자인 세 파트가 각자의 역량을 발휘하며

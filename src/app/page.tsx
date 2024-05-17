@@ -40,7 +40,7 @@ export default function Home() {
   return (
     <div className="px-6">
       <MainHeading />
-      <main className="relative flex flex-col items-center justify-between pb-8 desktop:min-h-[750px] desktop:items-start lg:min-h-[calc(100vh-7rem)]">
+      <main className="relative flex flex-col items-center justify-between pb-8 desktop:min-h-[calc(100vh-7rem)] desktop:items-start">
         <div>
           <div className="mt-10 flex flex-col items-center gap-6 desktop:mt-0 desktop:w-[533px] desktop:flex-row desktop:justify-between desktop:gap-12">
             <p className="text-center text-sm desktop:text-left">
@@ -55,16 +55,17 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="-ml-4 mt-8 flex w-[calc(100vw-(100vw-100%)+24px)] desktop:absolute desktop:right-0 desktop:top-14 desktop:mt-0 desktop:w-auto">
-          <div className="relative right-0 z-[-1] w-[900px]">
-            <div className="h-[441px]" />
+        <div className="-ml-4 mt-8 flex w-[calc(100vw-(100vw-100%)+24px)] desktop:absolute desktop:right-0 desktop:w-auto sm:top-24 sm:-mt-8 lg:top-0">
+          <div className="relative right-0 z-[-1] w-[1920px] overflow-hidden desktop:overflow-visible">
+            <div className="h-[450px]" />
             <Image
               src="/images/circle-designs/circle-design.svg"
               alt="원형 디자인"
-              width={900}
-              height={441}
-              className="object-fit absolute right-0 top-0 w-[900px] max-w-[900px] object-right desktop:w-[1100px] desktop:max-w-[1100px]"
+              width={1920}
+              height={450}
+              className="object-fit absolute -right-10 top-0 w-[900px] max-w-[900px] object-right desktop:right-0 desktop:w-[1100px] desktop:max-w-[1100px]"
             />
+            <div className="absolute -left-[1066px] top-[289px] h-[0.476px] w-full bg-white bg-opacity-50" />
           </div>
         </div>
         <div className="mt-12 flex flex-col items-center">

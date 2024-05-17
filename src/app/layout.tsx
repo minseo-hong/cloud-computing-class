@@ -12,6 +12,9 @@ import '/public/styles/font.css';
 export const metadata: Metadata = {
   title: 'ENGAGE ENERGY - KUSITMS',
   description: '큐시즘 1회 전시회 - ENGAGE ENERGY',
+  icons: {
+    icon: '/favicon/favicon.png',
+  },
 };
 
 export default function RootLayout({
