@@ -20,7 +20,7 @@ const TFTeamContent = () => {
       name: '행사기획운영팀',
       description:
         '전시 당일 타임라인을 정해 운영하고 관리했습니다. 이벤트 기획을 통해 참여자 및 관람자에게 즐거움을 주었습니다.',
-      member: '팀원 | 김가연 김다연 김시연 문서현 박신형',
+      member: '팀원 | 강예림 이은섭 이장미 한나영 홍민서',
     },
     {
       name: '아트미디어팀',
@@ -35,7 +35,7 @@ const TFTeamContent = () => {
       {teamList.map((team, index) => (
         <div key={index}>
           <Heading as="h2">{team.name}</Heading>
-          <div className="desktop:flex-row desktop:gap-14 mt-4 flex flex-col gap-4 md:gap-28">
+          <div className="mt-4 flex flex-col gap-4 desktop:flex-row desktop:gap-14 md:gap-28">
             <Paragraph className="desktop:flex-1">{team.description}</Paragraph>
             <Paragraph className="desktop:flex-1">{team.member}</Paragraph>
           </div>

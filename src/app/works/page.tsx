@@ -17,10 +17,8 @@ const ComingSoonPage = () => {
           ))}
         </div>
         <div className="absolute top-1/2 -translate-y-full">
-          <DDay year={2024} month={5} day={25} />
-          <p className="font-medium">
-            프로젝트는 전시 오픈 후 아카이빙 될 예정입니다.
-          </p>
+          <DDay year={2024} month={6} day={3} />
+          <p className="font-medium">프로젝트는 추후 아카이빙 될 예정입니다.</p>
         </div>
       </div>
     </main>
