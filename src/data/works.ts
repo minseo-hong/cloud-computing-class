@@ -3,6 +3,7 @@ export const workList: {
   name: string;
   koName: string;
   members: string[];
+  teamType: 'OB' | 'YB' | 'COMPANY';
   description: {
     simple: string;
     detail: string;
@@ -16,6 +17,7 @@ export const workList: {
     slug: 'schoolpoint',
     name: '팜어스 | Farmus',
     koName: '스쿨포인트',
+    teamType: 'YB',
     members: [
       '김동우',
       '김규리',
@@ -41,6 +43,7 @@ export const workList: {
     slug: 'farmus',
     name: '팜어스 | Farmus',
     koName: '플라잇',
+    teamType: 'YB',
     members: [
       '민혜린',
       '주연진',
@@ -66,6 +69,7 @@ export const workList: {
     slug: 'farmus',
     name: '팜어스 | Farmus',
     koName: '플립잇',
+    teamType: 'YB',
     members: [
       '박가은',
       '배승우',
@@ -91,6 +95,7 @@ export const workList: {
     slug: 'farmus',
     name: '팜어스 | Farmus',
     koName: '셀피스',
+    teamType: 'YB',
     members: [
       '신민선',
       '김민혜',
@@ -115,6 +120,7 @@ export const workList: {
     slug: 'farmus',
     name: '세번째 | Farmus',
     koName: '또바',
+    teamType: 'YB',
     members: [
       '정예진',
       '신기성',
@@ -140,6 +146,7 @@ export const workList: {
     slug: 'farmus',
     name: '팜어스 | Farmus',
     koName: '유니브핏',
+    teamType: 'YB',
     members: [
       '홍가연',
       '김병진',
@@ -164,6 +171,7 @@ export const workList: {
     slug: 'farmus',
     name: '팜어스 | Farmus',
     koName: '뉴띵',
+    teamType: 'YB',
     members: [
       '김연지',
       '김대헌',
@@ -188,6 +196,7 @@ export const workList: {
     slug: 'farmus',
     name: '팜어스 | Farmus',
     koName: '싱크',
+    teamType: 'YB',
     members: [
       '김예은',
       '김서윤',
@@ -213,6 +222,7 @@ export const workList: {
     slug: 'farmus',
     name: '팜어스 | Farmus',
     koName: '리마인드',
+    teamType: 'YB',
     members: [
       '배예진',
       '김서연',
@@ -237,6 +247,7 @@ export const workList: {
     slug: 'farmus',
     name: '팜어스 | Farmus',
     koName: '대피로',
+    teamType: 'OB',
     members: [
       '김연지',
       '김서윤',
@@ -261,6 +272,7 @@ export const workList: {
     slug: 'farmus',
     name: '팜어스 | Farmus',
     koName: '라이톤',
+    teamType: 'OB',
     members: ['박지호', '강서연', '최호연', '이승렬'],
     description: {
       simple: '도시농부들을 위한 챌린지형 채소 관리 모바일 서비스',
@@ -276,6 +288,7 @@ export const workList: {
     slug: 'farmus',
     name: '팜어스 | Farmus',
     koName: '레코딩',
+    teamType: 'OB',
     members: [
       '신민선',
       '박지호',
@@ -300,6 +313,7 @@ export const workList: {
     slug: 'farmus',
     name: '팜어스 | Farmus',
     koName: '와이니',
+    teamType: 'OB',
     members: [
       '김희연',
       '최성경',
@@ -323,6 +337,7 @@ export const workList: {
     slug: 'farmus',
     name: '팜어스 | Farmus',
     koName: '코넥독',
+    teamType: 'OB',
     members: ['이시윤', '민혜린', '권예인', '강승구', '민경혁', '한호정'],
     description: {
       simple: '도시농부들을 위한 챌린지형 채소 관리 모바일 서비스',
@@ -338,6 +353,7 @@ export const workList: {
     slug: 'farmus',
     name: '팜어스 | Farmus',
     koName: '팜어스',
+    teamType: 'OB',
     members: ['이은섭', '이장미', '남서윤', '이승렬', '양건희', '김아린'],
     description: {
       simple: '도시농부들을 위한 챌린지형 채소 관리 모바일 서비스',
@@ -353,6 +369,7 @@ export const workList: {
     slug: 'farmus',
     name: '팜어스 | Farmus',
     koName: '플로잇',
+    teamType: 'OB',
     members: [
       '신민선',
       '김가연',
@@ -376,6 +393,7 @@ export const workList: {
     slug: 'farmus',
     name: '팜어스 | Farmus',
     koName: '렛츠커리어',
+    teamType: 'COMPANY',
     members: [
       '송다예',
       '임호정',
@@ -406,6 +424,7 @@ export const workList: {
     slug: 'farmus',
     name: '팜어스 | Farmus',
     koName: '코드잇',
+    teamType: 'COMPANY',
     members: ['이예은'],
     description: {
       simple: '도시농부들을 위한 챌린지형 채소 관리 모바일 서비스',
