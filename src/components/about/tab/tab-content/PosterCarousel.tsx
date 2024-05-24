@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 
 import CarouselButton from './CarouselButton';
+import clsx from 'clsx';
 
 const PosterCarousel = () => {
   const [currentPoster, setCurrentPoster] = useState(0);
@@ -41,12 +42,18 @@ const PosterCarousel = () => {
     <div className="relative w-full">
       <CarouselButton direction="prev" onClick={handlePrevClick} />
       <div className="mx-auto mt-12 max-w-[20rem]">
-        <Image
-          src={posterList[currentPoster].src}
-          alt={posterList[currentPoster].alt}
-          width={2481}
-          height={3508}
-        />
+        {posterList.map((poster, index) => (
+          <Image
+            key={index}
+            src={poster.src}
+            alt={poster.alt}
+            width={2481}
+            height={3508}
+            className={clsx({
+              hidden: currentPoster !== index,
+            })}
+          />
+        ))}
       </div>
       <CarouselButton direction="next" onClick={handleNextClick} />
     </div>
