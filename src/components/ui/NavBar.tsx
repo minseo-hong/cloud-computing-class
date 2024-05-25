@@ -48,8 +48,12 @@ const NavBar = () => {
       <nav className="fixed top-0 z-50 flex w-full flex-col bg-black px-6">
         <div className="flex h-[4rem] w-full items-center justify-between desktop:h-[2.75rem] desktop:items-end">
           <Link href="/" className="flex items-center gap-2">
-            <span className="hidden desktop:block">KUSITMS 1st EXHIBITION</span>
-            <Image src="/logo/logo.svg" alt="로고" width={40} height={22} />
+            <span className="hidden text-lg desktop:block">
+              KUSITMS 1st EXHIBITION
+            </span>
+            <span className="relative h-[22px] w-[40px] desktop:w-[30px]">
+              <Image src="/logo/logo.svg" alt="로고" fill />
+            </span>
           </Link>
           <div className="font-clash-display text-2xl font-medium desktop:hidden">
             {pageName}
