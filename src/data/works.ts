@@ -170,7 +170,7 @@ export const workList: {
   {
     slug: 'farmus',
     name: '팜어스 | Farmus',
-    koName: '뉴띵',
+    koName: '뉴씽',
     teamType: 'YB',
     members: [
       '김연지',
