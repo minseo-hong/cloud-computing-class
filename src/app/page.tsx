@@ -1,46 +1,47 @@
 import MainHeading from '@/components/ui/MainHeading';
+import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Home() {
-  const partnerList = [
+  const partnerList: {
+    name: string;
+    src: string;
+    alt: string;
+    link?: string;
+    widthStyle: string;
+  }[] = [
     {
       name: 'KUSITMS',
       src: '/images/partners/kusitms.svg',
       alt: '큐시즘 로고',
       link: 'https://kusitms.com',
-      width: 90,
-    },
-    {
-      name: 'SANGSANGUNIV',
-      src: '/images/partners/sangsanguniv.svg',
-      alt: '상상유니브 로고',
-      width: 80,
+      widthStyle: 'w-[80px] desktop:w-[90px]',
     },
     {
       name: 'ASAN-NANUM',
       src: '/images/partners/asan-nanum.svg',
       alt: '아산나눔재단 로고',
-      width: 80,
+      widthStyle: 'w-[70px] desktop:w-[80px]',
     },
     {
       name: 'D-CAMP',
       src: '/images/partners/d-camp.svg',
       alt: '디캠프 로고',
-      width: 70,
+      widthStyle: 'w-[60px] desktop:w-[70px]',
     },
     {
       name: 'CODEIT',
       src: '/images/partners/codeit.svg',
       alt: '코드잇 로고',
-      width: 65,
+      widthStyle: 'w-[55px] desktop:w-[65px]',
     },
   ];
 
   return (
     <div className="px-6">
       <MainHeading />
-      <main className="relative flex flex-col items-center justify-between pb-8 desktop:min-h-[calc(100vh-7rem)] desktop:items-start">
+      <main className="relative flex flex-col items-center justify-between pb-8 desktop:min-h-[calc(100vh-5rem)] desktop:items-start min-[800px]:min-h-[calc(100vh-7rem)]">
         <div>
           <div className="mt-10 flex flex-col items-center gap-6 desktop:mt-0 desktop:w-[533px] desktop:flex-row desktop:justify-between desktop:gap-12">
             <p className="text-center text-sm desktop:text-left">
@@ -69,16 +70,14 @@ export default function Home() {
           </div>
         </div>
         <div className="mt-12 flex flex-col items-center">
-          <div className="flex flex-col items-center gap-4 desktop:flex-row desktop:gap-6">
+          <div className="flex items-center gap-4 desktop:gap-6">
             <div className="flex items-end gap-6">
-              {partnerList.slice(0, 3).map((partner, index) =>
+              {partnerList.slice(0, 2).map((partner, index) =>
                 partner.link ? (
                   <Link
                     key={index}
                     href={partner.link}
-                    style={{
-                      width: partner.width,
-                    }}
+                    className={clsx(partner.widthStyle)}
                   >
                     <Image
                       src={partner.src}
@@ -88,12 +87,7 @@ export default function Home() {
                     />
                   </Link>
                 ) : (
-                  <div
-                    key={index}
-                    style={{
-                      width: partner.width,
-                    }}
-                  >
+                  <div key={index} className={clsx(partner.widthStyle)}>
                     <Image
                       src={partner.src}
                       alt={partner.alt}
@@ -105,13 +99,8 @@ export default function Home() {
               )}
             </div>
             <div className="flex items-end gap-6">
-              {partnerList.slice(3, 5).map((partner, index) => (
-                <div
-                  key={index}
-                  style={{
-                    width: partner.width,
-                  }}
-                >
+              {partnerList.slice(2, 4).map((partner, index) => (
+                <div key={index} className={clsx(partner.widthStyle)}>
                   <Image
                     src={partner.src}
                     alt={partner.alt}
