@@ -408,7 +408,6 @@ export const workList: {
       '정수범',
       '송민제',
       '김명원',
-      '박지호',
     ],
     description: {
       simple: '도시농부들을 위한 챌린지형 채소 관리 모바일 서비스',

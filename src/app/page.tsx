@@ -47,7 +47,7 @@ export default function Home() {
             <p className="text-center text-sm desktop:text-left">
               2024.06.08.SAT
               <br className="hidden desktop:block" />
-              10:00AM-19:00PM
+              10:00AM-18:00PM
             </p>
             <p className="text-center text-sm desktop:text-left">
               DIMENSION GALLERY
