@@ -1,8 +1,8 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { workList } from '@/data/works';
 import Paragraph from '@/components/ui/Paragraph';
-import Link from 'next/link';
 
 const WorkDetail = ({ params }: { params: { slug: string } }) => {
   const work = workList.find((work) => work.slug === params.slug);
@@ -20,13 +20,13 @@ const WorkDetail = ({ params }: { params: { slug: string } }) => {
         </header>
         <div className="flex flex-col md:flex-row md:gap-8">
           <section className="md:flex-[3]">
-            <div className="mt-4 aspect-video w-full">
+            <div className="relative mt-4 aspect-video w-full overflow-hidden">
               <Image
                 src={work.image.src}
-                alt={work.image.alt}
-                width={4096}
-                height={2304}
+                alt={work.koName}
+                fill
                 className="z-[-1]"
+                objectFit="cover"
               />
             </div>
           </section>
@@ -36,37 +36,110 @@ const WorkDetail = ({ params }: { params: { slug: string } }) => {
                 <Paragraph key={index}>{line}</Paragraph>
               ))}
             </div>
-            <div>
-              <h2 className="font-clash-display font-medium">Contact</h2>
-              <div className="mt-1 flex flex-col gap-1">
-                <div className="flex items-center text-sm font-extralight">
-                  <strong className="w-[4.5rem] text-xs font-medium">
-                    Web Link
-                  </strong>
-                  <Link
-                    href="https://www.youtube.com"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    className="underline"
-                  >
-                    https://www.youtube.com
-                  </Link>
-                </div>
-                <div className="flex items-center text-sm font-extralight">
-                  <strong className="w-[4.5rem] text-xs font-medium">
-                    Instagram
-                  </strong>
-                  <span>@farmus</span>
+            {work.link && (
+              <div>
+                <h2 className="font-clash-display font-medium">Contact</h2>
+                <div className="mt-1 flex w-[20rem] flex-col gap-1">
+                  {work.link.web && (
+                    <div className="flex items-center text-sm font-extralight">
+                      <strong className="w-[4.5rem] text-xs font-medium">
+                        Web Link
+                      </strong>
+                      <Link
+                        href="https://www.youtube.com"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        className="min-w-0 flex-1 overflow-hidden text-ellipsis whitespace-nowrap underline"
+                      >
+                        {work.link.web}
+                      </Link>
+                    </div>
+                  )}
+                  {work.link.android && (
+                    <div className="flex items-center text-sm font-extralight">
+                      <strong className="w-[4.5rem] text-xs font-medium">
+                        Android
+                      </strong>
+                      <Link
+                        href={work.link.android}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        className="min-w-0 flex-1 overflow-hidden text-ellipsis whitespace-nowrap underline"
+                      >
+                        {work.link.android}
+                      </Link>
+                    </div>
+                  )}
+                  {work.link.ios && (
+                    <div className="flex items-center text-sm font-extralight">
+                      <strong className="w-[4.5rem] text-xs font-medium">
+                        iOS
+                      </strong>
+                      <Link
+                        href={work.link.ios}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        className="min-w-0 flex-1 overflow-hidden text-ellipsis whitespace-nowrap underline"
+                      >
+                        {work.link.ios}
+                      </Link>
+                    </div>
+                  )}
+                  {work.link.instagram && (
+                    <div className="flex items-center text-sm font-extralight">
+                      <strong className="w-[4.5rem] text-xs font-medium">
+                        Instagram
+                      </strong>
+                      <Link
+                        href={`https://www.instagram.com/${work.link.instagram}`}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        className="min-w-0 flex-1 overflow-hidden text-ellipsis whitespace-nowrap underline"
+                      >
+                        @{work.link.instagram}
+                      </Link>
+                    </div>
+                  )}
+                  {work.link.github && (
+                    <div className="flex items-center text-sm font-extralight">
+                      <strong className="w-[4.5rem] text-xs font-medium">
+                        Github
+                      </strong>
+                      <Link
+                        href={work.link.github}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        className="min-w-0 flex-1 overflow-hidden text-ellipsis whitespace-nowrap underline"
+                      >
+                        {work.link.github}
+                      </Link>
+                    </div>
+                  )}
+                  {work.link.recruit && (
+                    <div className="flex items-center text-sm font-extralight">
+                      <strong className="w-[4.5rem] text-xs font-medium">
+                        Recruit
+                      </strong>
+                      <Link
+                        href={work.link.recruit}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        className="min-w-0 flex-1 overflow-hidden text-ellipsis whitespace-nowrap underline"
+                      >
+                        {work.link.recruit}
+                      </Link>
+                    </div>
+                  )}
                 </div>
               </div>
-            </div>
+            )}
             <div>
               <h2 className="font-medium">Team 모던파머</h2>
               <div className="mt-2 text-sm font-extralight leading-6">
                 <ul>
-                  <li>기획 | 홍길동 홍길동</li>
-                  <li>디자인 | 홍길동</li>
-                  <li>개발 | 홍길동 홍길동 홍길동 홍길동</li>
+                  {work.memberPartList.map((memberPart) => (
+                    <li>{memberPart}</li>
+                  ))}
                 </ul>
               </div>
             </div>

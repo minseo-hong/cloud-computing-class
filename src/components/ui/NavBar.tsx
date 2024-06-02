@@ -4,12 +4,13 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const NavBar = () => {
   const pathname = usePathname();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [hideGradient, setHideGradient] = useState(false);
 
   const handleMenuButtonClick = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -42,6 +43,10 @@ const NavBar = () => {
     //   href: '/archive',
     // },
   ];
+
+  useEffect(() => {
+    setHideGradient(pathname.startsWith('/works/'));
+  }, [pathname]);
 
   return (
     <div>
@@ -99,7 +104,13 @@ const NavBar = () => {
         </div>
       </nav>
       <div
-        className="pointer-events-none fixed z-40 hidden h-[12rem] w-full bg-black desktop:block"
+        className={clsx(
+          'nav-bar-black-gradient pointer-events-none fixed z-40 hidden h-[12rem] w-full bg-black desktop:block',
+          {
+            'opacity-0': hideGradient,
+            'opacity-100': !hideGradient,
+          },
+        )}
         style={{
           background:
             'linear-gradient(180deg, #040000 0%, rgba(4, 0, 0, 0.00) 100%)',
