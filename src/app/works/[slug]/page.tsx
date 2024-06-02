@@ -138,7 +138,7 @@ const WorkDetail = ({ params }: { params: { slug: string } }) => {
               <div className="mt-2 text-sm font-extralight leading-6">
                 <ul>
                   {work.memberPartList.map((memberPart) => (
-                    <li>{memberPart}</li>
+                    <li key={memberPart}>{memberPart}</li>
                   ))}
                 </ul>
               </div>
