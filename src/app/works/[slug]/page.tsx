@@ -134,7 +134,7 @@ const WorkDetail = ({ params }: { params: { slug: string } }) => {
               </div>
             )}
             <div>
-              <h2 className="font-medium">Team 모던파머</h2>
+              <h2 className="font-medium">Team {work.koName}</h2>
               <div className="mt-2 text-sm font-extralight leading-6">
                 <ul>
                   {work.memberPartList.map((memberPart) => (
