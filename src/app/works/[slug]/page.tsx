@@ -46,7 +46,7 @@ const WorkDetail = ({ params }: { params: { slug: string } }) => {
                         Web Link
                       </strong>
                       <Link
-                        href="https://www.youtube.com"
+                        href={work.link.web}
                         target="_blank"
                         rel="noreferrer noopener"
                         className="min-w-0 flex-1 overflow-hidden text-ellipsis whitespace-nowrap underline"
