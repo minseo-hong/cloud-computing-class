@@ -100,6 +100,21 @@ const WorkDetail = ({ params }: { params: { slug: string } }) => {
                       </Link>
                     </div>
                   )}
+                  {work.link.blog && (
+                    <div className="flex items-center text-sm font-extralight">
+                      <strong className="w-[4.5rem] text-xs font-medium">
+                        Blog
+                      </strong>
+                      <Link
+                        href={work.link.blog}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        className="min-w-0 flex-1 overflow-hidden text-ellipsis whitespace-nowrap underline"
+                      >
+                        {work.link.blog}
+                      </Link>
+                    </div>
+                  )}
                   {work.link.github && (
                     <div className="flex items-center text-sm font-extralight">
                       <strong className="w-[4.5rem] text-xs font-medium">

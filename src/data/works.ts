@@ -17,6 +17,7 @@ export const workList: {
     android?: string;
     ios?: string;
     instagram?: string;
+    blog?: string;
     github?: string;
     recruit?: string;
   };
@@ -148,6 +149,9 @@ export const workList: {
     },
     image: {
       src: '/images/works/selpiece.png',
+    },
+    link: {
+      web: 'https://selpiece.vercel.app/',
     },
   },
   {
@@ -381,6 +385,9 @@ export const workList: {
     image: {
       src: '/images/works/recoding.png',
     },
+    link: {
+      web: 'https://re-coding-meetpl.vercel.app/',
+    },
   },
   {
     slug: 'winey',
@@ -479,7 +486,8 @@ export const workList: {
     memberPartList: [
       '기획 | 신민선(PM) 김가연 하현정',
       '디자인 | 한수현',
-      '개발 | 김형석 황주희 심규민 장세은',
+      '프론트엔드 | 김형석 황주희',
+      '백엔드 | 심규민 장세은',
     ],
     description: {
       simple: '팀과 개인의 균형 속에서, 일상을 함께 설계하는 서비스 ‘플로잇’',
@@ -487,6 +495,10 @@ export const workList: {
     },
     image: {
       src: '/images/works/flowith.png',
+    },
+    link: {
+      blog: 'https://pawith.framer.ai/',
+      ios: 'https://apps.apple.com/kr/app/%ED%8F%AC%EC%9E%87-pawith/id6472612736',
     },
   },
   {

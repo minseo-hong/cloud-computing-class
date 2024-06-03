@@ -70,7 +70,7 @@ const Works = () => {
                   src={work.image.src}
                   alt={work.koName}
                   fill
-                  objectFit="cover"
+                  className="object-cover"
                 />
               </Link>
               <div className="px-12 pb-8 pt-4 desktop:px-0 desktop:pb-0">
