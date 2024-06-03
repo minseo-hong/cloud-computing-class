@@ -177,7 +177,7 @@ export const workList: {
       detail: `또바는 시니어계층의 사회적 관계 형성을 도와 활기찬 사회활동을 지속할 수 있게 도와주는 서비스입니다. '활동 참여하기'에서는 맞춤형 필터링 기능으로 사회 활동 프로그램을 신청할 수 있고, '배움 나누기'에서는 지식을 직접 공유하고 배울 수 있고, '함께 대화하기'에서는 직접 소통하며 만남을 이어나갈 수 있습니다. 또바에서는 연결, 배움, 지속의 가치를 실현할 수 있습니다. `,
     },
     image: {
-      src: '/images/works/placeholder-work-image.svg',
+      src: '/images/works/ddoba.png',
     },
   },
   {
@@ -485,7 +485,7 @@ export const workList: {
       detail: `플로잇은 여러 팀에 속하여 할 일을 관리해야만 하는 2030세대의 일 과부하문제에 공감하여 팀과 개인 사이의 일상에서 보다 나은 삶을 효율적으로 살 수 있도록 도와주는 생산성 서비스입니다. 플로잇은 공유 투두를 통해, 나만의 개인 과업 뿐 아니라 누군가와 함께하는 일을 함께 소통하며 설계할 수 있도록 돕습니다. `,
     },
     image: {
-      src: '/images/works/placeholder-work-image.svg',
+      src: '/images/works/flowith.png',
     },
   },
   {
