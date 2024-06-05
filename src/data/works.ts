@@ -5,6 +5,7 @@ export const workList: {
   members: string[];
   memberPartList: string[];
   teamType: 'OB' | 'YB' | 'COMPANY';
+  teamName: string;
   description: {
     simple: string;
     detail: string;
@@ -27,6 +28,7 @@ export const workList: {
     name: '스쿨포인트 | School Point',
     koName: '스쿨포인트',
     teamType: 'YB',
+    teamName: 'ASAP',
     members: [
       '김동우',
       '김규리',
@@ -60,6 +62,7 @@ export const workList: {
     name: '플라잇 | Flight',
     koName: '플라잇',
     teamType: 'YB',
+    teamName: '밤양갱',
     members: [
       '민혜린',
       '주연진',
@@ -90,9 +93,10 @@ export const workList: {
   },
   {
     slug: 'flipit',
-    name: '플리빗 | Flipit',
-    koName: '플리빗',
+    name: '플립잇 | Flipit',
+    koName: '플립잇',
     teamType: 'YB',
+    teamName: '베베',
     members: [
       '박가은',
       '배승우',
@@ -111,8 +115,8 @@ export const workList: {
       '백엔드 | 김예찬 장지효',
     ],
     description: {
-      simple: '타인을 알아가고 자신을 표현하는 가장 단순한 방법, ‘플리빗’',
-      detail: `플리빗은 사용자들이 질문과 답변을 통해 서로의 취향과 관심사를 공유하며 깊이 있는 소통을 가능하게 하는 Q&A 플랫폼입니다. 질문하기, 답변하기, 아이덴티티 카테고라이징, 그리고 특별한 피드백 기능인 '통했당'을 통해 사용자 간의 상호작용을 촉진하고, 개인의 아이덴티티를 표현할 수 있도록 돕습니다.`,
+      simple: '타인을 알아가고 자신을 표현하는 가장 단순한 방법, ‘플립잇’',
+      detail: `플립잇은 사용자들이 질문과 답변을 통해 서로의 취향과 관심사를 공유하며 깊이 있는 소통을 가능하게 하는 Q&A 플랫폼입니다. 질문하기, 답변하기, 아이덴티티 카테고라이징, 그리고 특별한 피드백 기능인 '통했당'을 통해 사용자 간의 상호작용을 촉진하고, 개인의 아이덴티티를 표현할 수 있도록 돕습니다.`,
     },
     image: {
       src: '/images/works/flipit.png',
@@ -127,6 +131,7 @@ export const workList: {
     name: '셀피스 | SELPIECE',
     koName: '셀피스',
     teamType: 'YB',
+    teamName: '쿨피스',
     members: [
       '신민선',
       '김민혜',
@@ -159,6 +164,7 @@ export const workList: {
     name: '또바 | Ddoba',
     koName: '또바',
     teamType: 'YB',
+    teamName: '웃토',
     members: [
       '정예진',
       '신기성',
@@ -189,6 +195,7 @@ export const workList: {
     name: '유니브핏 | UnivFit',
     koName: '유니브핏',
     teamType: 'YB',
+    teamName: '맨동',
     members: [
       '홍가연',
       '김병진',
@@ -222,6 +229,7 @@ export const workList: {
     name: '뉴씽 | Newsthink',
     koName: '뉴씽',
     teamType: 'YB',
+    teamName: '굿머닝',
     members: [
       '김연지',
       '김대헌',
@@ -251,6 +259,7 @@ export const workList: {
     name: '싱크 | Sync',
     koName: '싱크',
     teamType: 'YB',
+    teamName: '에잇취',
     members: [
       '김예은',
       '김서윤',
@@ -281,6 +290,7 @@ export const workList: {
     name: '리마인드 | Re:mind',
     koName: '리마인드',
     teamType: 'YB',
+    teamName: '말랑말랑',
     members: [
       '배예진',
       '김서연',
@@ -310,6 +320,7 @@ export const workList: {
     name: '대피로 | Daepiro',
     koName: '대피로',
     teamType: 'OB',
+    teamName: '넘버원',
     members: [
       '김연지',
       '김서윤',
@@ -342,6 +353,7 @@ export const workList: {
     name: '라이톤 | Writon',
     koName: '라이톤',
     teamType: 'OB',
+    teamName: '라이톤',
     members: ['박지호', '강서연', '최호연', '이승렬'],
     memberPartList: [
       '기획 | 박지호(PM)',
@@ -362,6 +374,7 @@ export const workList: {
     name: '레코딩 | RE:CODING',
     koName: '레코딩',
     teamType: 'OB',
+    teamName: '밋플',
     members: [
       '신민선',
       '박지호',
@@ -394,6 +407,7 @@ export const workList: {
     name: '와이니 | WINEY',
     koName: '와이니',
     teamType: 'OB',
+    teamName: '와이니',
     members: [
       '김희연',
       '최성경',
@@ -430,6 +444,7 @@ export const workList: {
     name: '코넥독 | Connectdog',
     koName: '코넥독',
     teamType: 'OB',
+    teamName: '포윗유',
     members: ['이시윤', '민혜린', '권예인', '강승구', '민경혁', '한호정'],
     memberPartList: [
       '기획 | 이시윤 민혜린',
@@ -453,6 +468,7 @@ export const workList: {
     name: '팜어스 | Farmus',
     koName: '팜어스',
     teamType: 'OB',
+    teamName: '모던파머',
     members: ['이은섭', '이장미', '남서윤', '이승렬', '양건희', '김아린'],
     memberPartList: [
       '기획 | 이장미',
@@ -473,6 +489,7 @@ export const workList: {
     name: '플로잇 | Flowith',
     koName: '플로잇',
     teamType: 'OB',
+    teamName: '펫모리',
     members: [
       '신민선',
       '김가연',
@@ -506,6 +523,7 @@ export const workList: {
     name: '렛츠커리어 | Let’s Career',
     koName: '렛츠커리어',
     teamType: 'COMPANY',
+    teamName: '렛츠커리어',
     members: [
       '송다예',
       '임호정',
@@ -548,6 +566,7 @@ export const workList: {
     name: '코드잇 | Codeit',
     koName: '코드잇',
     teamType: 'COMPANY',
+    teamName: '코드잇',
     members: ['이예은'],
     memberPartList: ['담당 | 이예은'],
     description: {
@@ -568,8 +587,14 @@ export const workList: {
     name: '픽플리 | Pickply',
     koName: '픽플리',
     teamType: 'COMPANY',
-    members: ['김동호'],
-    memberPartList: ['담당 | 김동호'],
+    teamName: 'R2C컴퍼니',
+    members: ['김동호', '김현웅', '이승원', '이다영', '강우성'],
+    memberPartList: [
+      'PO(대표) | 김동호',
+      '개발 | 김현웅, 이승원',
+      '디자인 | 이다영',
+      '데이터 & 그로스 | 강우성',
+    ],
     description: {
       simple: '데이터의 수요자와 공급자를 연결한 D2C 데이터 플랫폼',
       detail: `픽플리는 데이터의 수요자와 공급자를 직접 연결하는 D2C 데이터 수집·생성 플랫폼입니다.\n\n게이미피케이션과 보상 콘텐츠와 커뮤니티를 통해 데이터 수집·생성 프로세스를 최적화하고, 자체 개발한 품질 관리 솔루션을 통해 고품질의 데이터를 제공합니다.\n\n데이터가 필요한 리서처는 합리적인 비용으로 양질의 데이터를, 데이터를 제공하는 픽플러는 정당한 보상을 제공받을 수 있습니다.\n\nR2C 컴퍼니는 픽플리를 통해 국내 2,000만 명이 이용하는 통계청 이상의 데이터 허브를,
