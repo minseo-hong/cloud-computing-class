@@ -76,7 +76,7 @@ const Works = () => {
               <div className="px-12 pb-8 pt-4 desktop:px-0 desktop:pb-0">
                 <h1 className="text-lg desktop:text-base">{work.name}</h1>
                 <p className="mt-0.5 text-sm font-extralight text-light-gray desktop:text-sm">
-                  Team {work.koName}
+                  Team {work.teamName}
                 </p>
               </div>
             </article>
