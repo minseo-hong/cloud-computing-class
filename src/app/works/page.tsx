@@ -32,10 +32,10 @@ const Works = () => {
   }, []);
 
   return (
-    <div className="pb-16 desktop:px-6">
-      <MainHeading className="hidden desktop:block" />
-      <main className="px-0 desktop:px-10">
-        {screenWidth < 600 && (
+    <div className="pb-16 md:px-6">
+      <MainHeading className="hidden md:block" />
+      <main className="px-0 md:px-10">
+        {screenWidth < 768 && (
           <nav className="mb-6 mt-4">
             <ul className="flex items-center justify-center gap-6">
               {Array.from({ length: pageLength }, (_, index) => index + 1).map(
@@ -59,7 +59,7 @@ const Works = () => {
             </ul>
           </nav>
         )}
-        <div className="grid grid-cols-1 desktop:mt-6 desktop:grid-cols-3 desktop:gap-x-2 desktop:gap-y-6 lg:grid-cols-4">
+        <div className="grid grid-cols-1 md:mt-6 md:grid-cols-3 md:gap-x-2 md:gap-y-6 lg:grid-cols-4">
           {newWorkList.map((work) => (
             <article key={work.slug}>
               <Link
@@ -73,9 +73,9 @@ const Works = () => {
                   className="object-cover"
                 />
               </Link>
-              <div className="px-12 pb-8 pt-4 desktop:px-0 desktop:pb-0">
-                <h1 className="text-lg desktop:text-base">{work.name}</h1>
-                <p className="mt-0.5 text-sm font-extralight text-light-gray desktop:text-sm">
+              <div className="px-12 pb-8 pt-4 md:px-0 md:pb-0">
+                <h1 className="text-lg md:text-base">{work.name}</h1>
+                <p className="mt-0.5 text-sm font-extralight text-light-gray md:text-sm">
                   Team {work.teamName}
                 </p>
               </div>
