@@ -10,7 +10,10 @@ const ArchivePage = () => {
         </h1>
         <div className="flex flex-col gap-4">
           {Array.from({ length: 13 }, (_, index) => index + 1).map((th) => (
-            <div className="aspect-2/3 w-full overflow-hidden md:w-[30rem]">
+            <div
+              key={th}
+              className="aspect-2/3 w-full overflow-hidden md:w-[30rem]"
+            >
               <img
                 src={`/images/archive/${th}.png`}
                 alt={`${th}번째 이미지`}
