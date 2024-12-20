@@ -1,0 +1,7 @@
+services:
+  cloud-computing-class:
+    build: .
+    image: cloud-computing-class
+    container_name: cloud-computing-class
+    ports:
+      - ${PORT_MAPPING}
