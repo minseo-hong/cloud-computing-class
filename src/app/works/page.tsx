@@ -5,12 +5,14 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { workList } from '@/data/works';
 import MainHeading from '@/components/ui/MainHeading';
+import { getWorkList } from '@/api/work';
+import { Work } from '@/types/work.type';
 
 const Works = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [screenWidth, setScreenWidth] = useState(1024);
+  const [workList, setWorkList] = useState<Work[]>([]);
 
   const pageLength = workList.length / 5 + 1;
 
@@ -18,6 +20,14 @@ const Works = () => {
     screenWidth < 600
       ? workList.slice((currentPage - 1) * 5, currentPage * 5)
       : workList;
+
+  useEffect(() => {
+    const fetchWorkList = async () => {
+      const workList: Work[] = await getWorkList();
+      setWorkList(workList);
+    };
+    fetchWorkList();
+  }, []);
 
   useEffect(() => {
     setScreenWidth(window.innerWidth);
@@ -35,7 +45,7 @@ const Works = () => {
     <div className="pb-16 md:px-6">
       <MainHeading className="hidden md:block" />
       <main className="px-0 md:px-10">
-        {screenWidth < 768 && (
+        {screenWidth < 768 && workList.length !== 0 && (
           <nav className="mb-6 mt-4">
             <ul className="flex items-center justify-center gap-6">
               {Array.from({ length: pageLength }, (_, index) => index + 1).map(
