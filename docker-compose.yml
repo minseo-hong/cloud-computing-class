@@ -1,6 +1,7 @@
 services:
   cloud-computing-class:
     build: .
+    platform: linux/amd64
     image: minseohong/cloud-computing-class
     container_name: cloud-computing-class
     ports:
