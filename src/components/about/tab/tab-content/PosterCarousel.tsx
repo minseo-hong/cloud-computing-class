@@ -11,19 +11,19 @@ const PosterCarousel = () => {
 
   const posterList = [
     {
-      src: '/images/posters/all-poster.png',
+      src: 'https://cloud-computing-class-s3.s3.ap-northeast-2.amazonaws.com/images/posters/all-poster.png',
       alt: '전체 포스터 이미지',
     },
     {
-      src: '/images/posters/plan-poster.png',
+      src: 'https://cloud-computing-class-s3.s3.ap-northeast-2.amazonaws.com/images/posters/plan-poster.png',
       alt: '기획 포스터 이미지',
     },
     {
-      src: '/images/posters/design-poster.png',
+      src: 'https://cloud-computing-class-s3.s3.ap-northeast-2.amazonaws.com/images/posters/design-poster.png',
       alt: '디자인 포스터 이미지',
     },
     {
-      src: '/images/posters/develop-poster.png',
+      src: 'https://cloud-computing-class-s3.s3.ap-northeast-2.amazonaws.com/images/posters/develop-poster.png',
       alt: '개발 포스터 이미지',
     },
   ];

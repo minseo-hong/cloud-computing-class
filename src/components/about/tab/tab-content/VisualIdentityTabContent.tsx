@@ -2,7 +2,7 @@ import Paragraph from '../../../ui/Paragraph';
 import TabContentLayout from './TabContentLayout';
 import PosterCarousel from './PosterCarousel';
 
-const VisualIentityTabContent = () => {
+const VisualIdentityTabContent = () => {
   return (
     <TabContentLayout>
       <PosterCarousel />
@@ -25,4 +25,4 @@ const VisualIentityTabContent = () => {
   );
 };
 
-export default VisualIentityTabContent;
+export default VisualIdentityTabContent;

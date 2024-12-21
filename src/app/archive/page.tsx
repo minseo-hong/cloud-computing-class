@@ -15,7 +15,7 @@ const ArchivePage = () => {
               className="aspect-2/3 w-full overflow-hidden md:w-[30rem]"
             >
               <img
-                src={`/images/archive/${th}.png`}
+                src={`https://cloud-computing-class-s3.s3.ap-northeast-2.amazonaws.com/images/archive/${th}.png`}
                 alt={`${th}번째 이미지`}
                 className="h-full w-full object-cover"
               />

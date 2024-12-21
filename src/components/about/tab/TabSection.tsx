@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 
-import VisualIentityTabContent from './tab-content/VisualIentityTabContent';
+import VisualIdentityTabContent from './tab-content/VisualIdentityTabContent';
 import TFTeamContent from './tab-content/TFTeamTabContent';
 import ParticipantsContent from './tab-content/ParticipantsContent';
 import TabMenu from './TabMenu';
@@ -30,7 +30,7 @@ const TabSection = () => {
         classNames="fade"
       >
         {activeTab === 0 ? (
-          <VisualIentityTabContent />
+          <VisualIdentityTabContent />
         ) : activeTab === 1 ? (
           <TFTeamContent />
         ) : (
